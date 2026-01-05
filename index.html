@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduCart - Materiais Escolares Inteligentes</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6', // Azul educacional
+                        secondary: '#10B981', // Verde
+                        accent: '#F59E0B' // Laranja/Amarelo
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navbar Component -->
+    <script src="components/navbar.js"></script>
+    <custom-navbar></custom-navbar>
+
+    <!-- Hero Banner -->
+    <section class="relative bg-gradient-to-r from-primary to-secondary text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Estudo Perfeito Começa Aqui! 🎒</h1>
+                <p class="text-xl mb-8 opacity-90">Encontre tudo que você precisa para um ano letivo incrível com os melhores preços e qualidade.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="catalogo.html" class="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 text-center">Ver Catálogo Completo</a>
+                    <a href="#destaques" class="bg-transparent border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition duration-300 text-center">Produtos em Destaque</a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 right-0 w-1/3 h-full hidden lg:block">
+            <div class="absolute inset-0 bg-gradient-to-l from-primary to-transparent"></div>
+            <img src="http://static.photos/education/1200x630/101" alt="Estudante feliz" class="w-full h-full object-cover rounded-l-3xl">
+        </div>
+    </section>
+
+    <!-- Categorias -->
+    <section class="py-16">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Categorias Principais</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <a href="catalogo.html?categoria=mochilas" class="category-card group">
+                    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center group-hover:bg-blue-200 transition duration-300">
+                            <i data-feather="briefcase" class="text-primary w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg">Mochilas</h3>
+                        <p class="text-gray-600 text-sm mt-2">Escolha a ideal para você</p>
+                    </div>
+                </a>
+                <a href="catalogo.html?categoria=cadernos" class="category-card group">
+                    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-green-100 rounded-full flex items-center justify-center group-hover:bg-green-200 transition duration-300">
+                            <i data-feather="book-open" class="text-secondary w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg">Cadernos</h3>
+                        <p class="text-gray-600 text-sm mt-2">Variedade de estilos</p>
+                    </div>
+                </a>
+                <a href="catalogo.html?categoria=estojos" class="category-card group">
+                    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center group-hover:bg-yellow-200 transition duration-300">
+                            <i data-feather="package" class="text-accent w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg">Estojos</h3>
+                        <p class="text-gray-600 text-sm mt-2">Organize seus materiais</p>
+                    </div>
+                </a>
+                <a href="catalogo.html?categoria=escrita" class="category-card group">
+                    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center group-hover:bg-purple-200 transition duration-300">
+                            <i data-feather="edit-3" class="text-purple-600 w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg">Material de Escrita</h3>
+                        <p class="text-gray-600 text-sm mt-2">Canetas, lápis e mais</p>
+                    </div>
+                </a>
+                <a href="catalogo.html?categoria=tecnologia" class="category-card group">
+                    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-indigo-100 rounded-full flex items-center justify-center group-hover:bg-indigo-200 transition duration-300">
+                            <i data-feather="tablet" class="text-indigo-600 w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg">Tecnologia</h3>
+                        <p class="text-gray-600 text-sm mt-2">Tablets, calculadoras</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos em Destaque -->
+    <section id="destaques" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex justify-between items-center mb-12">
+                <h2 class="text-3xl font-bold">Produtos em Destaque ⭐</h2>
+                <a href="catalogo.html" class="text-primary font-semibold hover:underline flex items-center gap-2">
+                    Ver todos <i data-feather="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="featured-products">
+                <!-- Produtos serão carregados via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Promocional -->
+    <section class="py-16">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="bg-gradient-to-r from-accent to-yellow-400 rounded-3xl p-8 md:p-12 text-white">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="mb-8 md:mb-0 md:mr-8">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">Volta às Aulas! 🎒</h2>
+                        <p class="text-xl mb-6">Kit completo com 20% de desconto para estudantes</p>
+                        <a href="catalogo.html?promocao=volta-as-aulas" class="bg-white text-accent px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 inline-block">Aproveitar Oferta</a>
+                    </div>
+                    <div class="relative">
+                        <img src="http://static.photos/education/640x360/202" alt="Kit escolar" class="w-64 h-64 object-cover rounded-2xl shadow-2xl">
+                        <div class="absolute -top-4 -right-4 bg-red-500 text-white px-4 py-2 rounded-full font-bold text-lg">
+                            -20%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kits por Série -->
+    <section class="py-16">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Kits Prontos por Série 📚</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                            <i data-feather="smile" class="text-primary w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">Educação Infantil</h3>
+                        <p class="text-gray-600 mb-4">Materiais lúdicos e seguros para os pequenos</p>
+                        <a href="catalogo.html?serie=infantil" class="text-primary font-semibold hover:underline">Ver kit completo →</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                            <i data-feather="users" class="text-secondary w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">Fundamental I</h3>
+                        <p class="text-gray-600 mb-4">Tudo para os anos iniciais do ensino</p>
+                        <a href="catalogo.html?serie=fundamental1" class="text-primary font-semibold hover:underline">Ver kit completo →</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                            <i data-feather="book" class="text-accent w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">Ensino Médio</h3>
+                        <p class="text-gray-600 mb-4">Materiais para o pré-vestibular</p>
+                        <a href="catalogo.html?serie=medio" class="text-primary font-semibold hover:underline">Ver kit completo →</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                            <i data-feather="graduation-cap" class="text-purple-600 w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-bold text-xl mb-2">Universitário</h3>
+                        <p class="text-gray-600 mb-4">Especial para faculdade e cursos técnicos</p>
+                        <a href="catalogo.html?serie=universitario" class="text-primary font-semibold hover:underline">Ver kit completo →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <script src="components/footer.js"></script>
+    <custom-footer></custom-footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+        // Carregar produtos em destaque
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFeaturedProducts();
+        });
+    </script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>
